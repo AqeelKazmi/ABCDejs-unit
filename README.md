@@ -1,73 +1,37 @@
-## ethjs-unit
+## abcde-unit
 
-<div>
-  <!-- Dependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-unit">
-    <img src="https://david-dm.org/ethjs/ethjs-unit.svg"
-    alt="Dependency Status" />
-  </a>
 
-  <!-- devDependency Status -->
-  <a href="https://david-dm.org/ethjs/ethjs-unit#info=devDependencies">
-    <img src="https://david-dm.org/ethjs/ethjs-unit/dev-status.svg" alt="devDependency Status" />
-  </a>
-
-  <!-- Build Status -->
-  <a href="https://travis-ci.org/ethjs/ethjs-unit">
-    <img src="https://travis-ci.org/ethjs/ethjs-unit.svg"
-    alt="Build Status" />
-  </a>
-
-  <!-- NPM Version -->
-  <a href="https://www.npmjs.org/package/ethjs-unit">
-    <img src="http://img.shields.io/npm/v/ethjs-unit.svg"
-    alt="NPM version" />
-  </a>
-
-  <!-- Test Coverage -->
-  <a href="https://coveralls.io/r/ethjs/ethjs-unit">
-    <img src="https://coveralls.io/repos/github/ethjs/ethjs-unit/badge.svg" alt="Test Coverage" />
-  </a>
-
-  <!-- Javascript Style -->
-  <a href="http://airbnb.io/javascript/">
-    <img src="https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg" alt="js-airbnb-style" />
-  </a>
-</div>
-
-<br />
-
-A simple module for handling Ethereum unit convertion.
+A simple module for handling ABCDe unit convertion.
 
 ## Install
 
 ```
-npm install --save ethjs-unit
+npm install --save abcde-unit@0.0.2
 ```
 
 ## Usage
 
 ```js
-const unit = require('ethjs-unit');
+const unit = require('abcde-unit');
 
-var val1 = unit.toWei(249824778, 'ether');
+var val1 = unit.toWei(249824778, 'abcde');
 
 // result <BN ...> 249824778000000000000000000
 
-var val2 = unit.fromWei('249824778000000000000000000', 'ether');
+var val2 = unit.fromWei('249824778000000000000000000', 'abcde');
 
 // result '249824778'
 ```
 
 ## About
 
-A port from the `web3.js` library, that just handles the unit convertion between the various types of Ethereum currency units.
+A part from the `abcdeweb3.js` library, that just handles the unit convertion between the various types of ABCDe currency units.
 
 Note, the `toWei` returns a BN instance while `fromWei` always returns a string number.
 
 ## Amorphic Data Formatting
 
-`ethjs-unit` uses the [number-to-bn](http://github.com/silentcicero/number-to-bn) module to format all number values (hex or otherwise) into digestable BN.js number instances.
+`abcde-unit` uses the [number-to-bn](http://github.com/silentcicero/number-to-bn) module to format all number values (hex or otherwise) into digestable BN.js number instances.
 
 ## Methods Available & Objects
 
@@ -85,33 +49,33 @@ fromWei         <Function (value, unit) : (String)>
 'kwei':         '1000',
 'Kwei':         '1000',
 'babbage':      '1000',
-'femtoether':   '1000',
+'femtoabcde':   '1000',
 'mwei':         '1000000',
 'Mwei':         '1000000',
 'lovelace':     '1000000',
-'picoether':    '1000000',
+'picoabcde':    '1000000',
 'gwei':         '1000000000',
 'Gwei':         '1000000000',
 'shannon':      '1000000000',
-'nanoether':    '1000000000',
+'nanoabcde':    '1000000000',
 'nano':         '1000000000',
 'szabo':        '1000000000000',
-'microether':   '1000000000000',
+'microabcde':   '1000000000000',
 'micro':        '1000000000000',
 'finney':       '1000000000000000',
-'milliether':   '1000000000000000',
+'milliabcde':   '1000000000000000',
 'milli':        '1000000000000000',
-'ether':        '1000000000000000000',
-'kether':       '1000000000000000000000',
+'abcde':        '1000000000000000000',
+'kabcde':       '1000000000000000000000',
 'grand':        '1000000000000000000000',
-'mether':       '1000000000000000000000000',
-'gether':       '1000000000000000000000000000',
-'tether':       '1000000000000000000000000000000'
+'meabcde':       '1000000000000000000000000',
+'gabcde':       '1000000000000000000000000000',
+'tabcde':       '1000000000000000000000000000000'
 ```
 
 ## Why BN.js?
 
-`ethjs` has made a policy of using `BN.js` accross all of our modules. Here are some reasons why:
+`abcde` has made a policy of using `BN.js` accross all of our modules. Here are some reasons why:
 
   1. Lighter than alternatives (BigNumber.js)
   2. Faster than most alternatives, see [benchmarks](https://github.com/indutny/bn.js/issues/89)
@@ -125,7 +89,7 @@ Please help better the ecosystem by submitting issues and pull requests to defau
 
 ## Guides
 
-You'll find more detailed information on using `ethjs-unit` and tailoring it to your needs in our guides:
+You'll find more detailed information on using `abcde-unit` and tailoring it to your needs in our guides:
 
 - [User guide](docs/user-guide.md) - Usage, configuration, FAQ and complementary tools.
 - [Developer guide](docs/developer-guide.md) - Contributing to `ethjs-unit`, writing coverage and updates.
